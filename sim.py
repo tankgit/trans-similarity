@@ -58,7 +58,7 @@ class sim:
 	        totdl += len(d)
 	    avgdl = totdl / len(doc_vectors)		#avgdl=所有词的数量/所有句子的数量
 	    scores = {}
-	    #quest_vector = [x for x in jieba.cut(question)]	#对句子分词，其实这步没必要用jieba库
+	    #quest_vector = [x for x in jieba.cut(question)]	#对句子分词，其实这步没必要用jieba库，如果用于中文，则需要这一步。
 	    quest_vector = [x for x in question.split(' ')]	#于是我直接用空格进行分词，与用库分词的效果基本一样，但有一些区别。
 	    for idx, doc in enumerate(doc_vectors):
 	        scores[idx] = bm25(quest_vector, doc)		#得到每个句子的相关性

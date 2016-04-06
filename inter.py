@@ -1,7 +1,11 @@
 #coding:utf-8
-from similarity import sim
+from sim2 import sim
 
 if __name__=='__main__':
-	mysim=sim();
-	sim,sent= mysim.calc_sim('What he has lost noble Macbeth are win.','dict.txt')
-	print '%f %s' % (sim,sent)
+	mysim=sim()
+	sim,sent= mysim.calc_sim('What he has lost noble Macbeth are win.','mkb.txt')
+	print '%f %s\n' % (sim,sent)
+    	sim,sent= mysim.calc_sim('What he has lost noble Macbeth are win.','mkb.txt')
+	print '%f %s\n' % (sim,sent)
+        sim,sent= mysim.calc_sim('What he has lost noble Macbeth are win.','mkb.txt')
+	print '%f %s\n' % (sim,sent)
